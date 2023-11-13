@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
-import { Inter, Roboto } from "next/font/google";
+import { Inter, Roboto, Aclonica } from "next/font/google";
 import NavBar from "./NavBar";
 import AuthProvider from "./auth/Provider";
 import GoogleAnalyticsScript from "./GoogleAnalyticsScript";
@@ -9,7 +9,9 @@ import GoogleAnalyticsScript from "./GoogleAnalyticsScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const roboto = Roboto({subsets: ["latin"], weight: ["400", "500"] });
+// const roboto = Roboto({subsets: ["latin"], weight: ["400", "500"] });
+
+// const aclonica = Aclonica({subsets: ["latin"], weight: ["400"]});
 
 const poppins = localFont({
   src: '../public/fonts/poppins-regular-webfont.woff2',
@@ -26,10 +28,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const combinedClassNames = `${inter.className} ${poppins.variable}`;
   return (
     <html lang="en" data-theme="winter">
       <GoogleAnalyticsScript/>
-      <body className={poppins.variable}>
+      <body className={combinedClassNames}>
         <AuthProvider>
           <NavBar />
           <main className="p-5">{children}</main>
