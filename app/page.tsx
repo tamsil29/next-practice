@@ -10,10 +10,10 @@ export default async function Home() {
 
   return (
     <main className="relative h-screen">
-      {/* <h1>Hello {session && <span>{session.user?.name}</span>}</h1>
+      <h1 className="font-poppins">HellOOO {session && <span>{session.user?.name}</span>}</h1>
       <Link href="/users">Users</Link>
-      <ProductCard/> */}
-      <Image
+      <ProductCard/>
+      {/* <Image
         src={"https://bit.ly/react-cover"}
         alt={"mac"}
         fill
@@ -21,7 +21,7 @@ export default async function Home() {
         sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
         quality={100}
         priority
-      />
+      /> */}
     </main>
   );
 }
