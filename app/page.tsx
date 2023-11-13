@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "./components/ProductCard";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 import mac from "@/public/images/mac.jpg";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
